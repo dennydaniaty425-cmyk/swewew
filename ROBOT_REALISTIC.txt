@@ -1,0 +1,310 @@
+<!-- Robot BG - Realistic 3D -->
+<div class="robot-wrap" id="robotWrap">
+    <svg class="robot-svg" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <!-- Realistic metal gradients with highlights -->
+            <linearGradient id="metalDark" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#0a0a12;stop-opacity:1" />
+                <stop offset="30%" style="stop-color:#1a1a2e;stop-opacity:1" />
+                <stop offset="60%" style="stop-color:#2d2d44;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="metalLight" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#3a3a52;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#2d2d44;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="metalShine" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+                <stop offset="40%" style="stop-color:#4a4a66;stop-opacity:1" />
+                <stop offset="60%" style="stop-color:#4a4a66;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+            </linearGradient>
+            
+            <!-- Realistic blue glow -->
+            <radialGradient id="blueGlow">
+                <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+                <stop offset="40%" style="stop-color:#00d9ff;stop-opacity:0.8" />
+                <stop offset="100%" style="stop-color:#0066ff;stop-opacity:0.2" />
+            </radialGradient>
+            
+            <!-- Arc reactor with depth -->
+            <radialGradient id="reactorCore">
+                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                <stop offset="20%" style="stop-color:#00ffff;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#0099ff;stop-opacity:0.9" />
+                <stop offset="80%" style="stop-color:#0066ff;stop-opacity:0.5" />
+                <stop offset="100%" style="stop-color:#003366;stop-opacity:0.2" />
+            </radialGradient>
+            
+            <!-- Shadow gradient -->
+            <radialGradient id="shadowGrad">
+                <stop offset="0%" style="stop-color:#000000;stop-opacity:0.6" />
+                <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+
+        <g id="robot-body-group">
+            <!-- Ground shadow -->
+            <ellipse cx="200" cy="585" rx="160" ry="18" fill="url(#shadowGrad)"/>
+
+            <!-- ═══ LEGS with 3D shading ═══ -->
+            <!-- Left leg -->
+            <g id="left-leg">
+                <!-- Thigh main -->
+                <polygon points="115,430 95,430 90,490 120,490" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2.5"/>
+                <polygon points="120,430 140,430 145,490 115,490" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="1.5"/>
+                <!-- Highlight -->
+                <polygon points="118,435 122,435 125,485 115,485" fill="#3a3a52" opacity="0.4"/>
+                <!-- Panel lines -->
+                <line x1="100" y1="445" x2="135" y2="445" stroke="#00d9ff" stroke-width="1" opacity="0.3"/>
+                <line x1="98" y1="460" x2="137" y2="460" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                <rect x="100" y="440" width="35" height="6" rx="2" fill="#00d9ff" opacity="0.15"/>
+                
+                <!-- Knee joint with depth -->
+                <circle cx="117" cy="492" r="16" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2.5"/>
+                <circle cx="117" cy="492" r="11" fill="#0a0a12" stroke="#00d9ff" stroke-width="1.5"/>
+                <circle cx="117" cy="492" r="6" fill="#00d9ff" opacity="0.3"/>
+                <circle cx="120" cy="489" r="3" fill="#4a4a66" opacity="0.6"/>
+                
+                <!-- Lower leg -->
+                <polygon points="102,495 92,555 112,575 122,510" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2.5"/>
+                <polygon points="122,510 112,575 132,575 142,495" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="1.5"/>
+                <polygon points="125,515 128,515 130,570 122,570" fill="#3a3a52" opacity="0.3"/>
+                <line x1="105" y1="520" x2="135" y2="520" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                <line x1="103" y1="540" x2="137" y2="540" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                
+                <!-- Ankle -->
+                <circle cx="112" cy="575" r="11" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2"/>
+                <circle cx="112" cy="575" r="6" fill="#0a0a12"/>
+                
+                <!-- Foot with 3D -->
+                <polygon points="80,575 70,580 80,590 145,590 155,580 145,575" fill="url(#metalShine)" stroke="#00d9ff" stroke-width="2.5"/>
+                <polygon points="85,580 90,585 140,585 145,580" fill="#0a0a12" stroke="#00d9ff" stroke-width="1"/>
+                <rect x="75" y="583" width="15" height="5" rx="2" fill="#00d9ff" opacity="0.2"/>
+                <rect x="95" y="583" width="40" height="5" rx="2" fill="#00d9ff" opacity="0.15"/>
+            </g>
+
+            <!-- Right leg (mirrored with same detail) -->
+            <g id="right-leg">
+                <polygon points="285,430 305,430 310,490 280,490" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2.5"/>
+                <polygon points="280,430 260,430 255,490 285,490" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="1.5"/>
+                <polygon points="282,435 278,435 275,485 285,485" fill="#3a3a52" opacity="0.4"/>
+                <line x1="300" y1="445" x2="265" y2="445" stroke="#00d9ff" stroke-width="1" opacity="0.3"/>
+                <line x1="302" y1="460" x2="263" y2="460" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                <rect x="265" y="440" width="35" height="6" rx="2" fill="#00d9ff" opacity="0.15"/>
+                
+                <circle cx="283" cy="492" r="16" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2.5"/>
+                <circle cx="283" cy="492" r="11" fill="#0a0a12" stroke="#00d9ff" stroke-width="1.5"/>
+                <circle cx="283" cy="492" r="6" fill="#00d9ff" opacity="0.3"/>
+                <circle cx="280" cy="489" r="3" fill="#4a4a66" opacity="0.6"/>
+                
+                <polygon points="298,495 308,555 288,575 278,510" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2.5"/>
+                <polygon points="278,510 288,575 268,575 258,495" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="1.5"/>
+                <polygon points="275,515 272,515 270,570 278,570" fill="#3a3a52" opacity="0.3"/>
+                <line x1="295" y1="520" x2="265" y2="520" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                <line x1="297" y1="540" x2="263" y2="540" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                
+                <circle cx="288" cy="575" r="11" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2"/>
+                <circle cx="288" cy="575" r="6" fill="#0a0a12"/>
+                
+                <polygon points="320,575 330,580 320,590 255,590 245,580 255,575" fill="url(#metalShine)" stroke="#00d9ff" stroke-width="2.5"/>
+                <polygon points="315,580 310,585 260,585 255,580" fill="#0a0a12" stroke="#00d9ff" stroke-width="1"/>
+                <rect x="310" y="583" width="15" height="5" rx="2" fill="#00d9ff" opacity="0.2"/>
+                <rect x="265" y="583" width="40" height="5" rx="2" fill="#00d9ff" opacity="0.15"/>
+            </g>
+
+            <!-- ═══ PELVIS ═══ -->
+            <polygon points="135,410 115,430 285,430 265,410" fill="url(#metalShine)" stroke="#00d9ff" stroke-width="2.5"/>
+            <polygon points="145,415 155,425 245,425 255,415" fill="#0a0a12" stroke="#00d9ff" stroke-width="1"/>
+            <rect x="180" y="418" width="40" height="8" rx="3" fill="#00d9ff" opacity="0.2"/>
+            <line x1="150" y1="420" x2="250" y2="420" stroke="#4a4a66" stroke-width="1" opacity="0.4"/>
+
+            <!-- ═══ TORSO with realistic shading ═══ -->
+            <!-- Main chest armor -->
+            <polygon points="75,270 65,310 65,390 125,410 275,410 335,390 335,310 325,270" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="3"/>
+            <polygon points="95,285 85,320 85,380 135,395 265,395 315,380 315,320 305,285" fill="#0a0a12" stroke="#00d9ff" stroke-width="1.5"/>
+            
+            <!-- Chest highlights -->
+            <polygon points="200,275 190,285 190,320 200,330 210,320 210,285" fill="#3a3a52" opacity="0.3"/>
+            <line x1="100" y1="290" x2="300" y2="290" stroke="#4a4a66" stroke-width="2" opacity="0.3"/>
+            
+            <!-- Arc Reactor - realistic 3D -->
+            <circle cx="200" cy="330" r="50" fill="url(#reactorCore)" opacity="0.95">
+                <animate attributeName="r" values="50;54;50" dur="2.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="200" cy="330" r="42" fill="#0099ff" opacity="0.6">
+                <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="200" cy="330" r="32" fill="#00ffff" opacity="0.8"/>
+            <circle cx="200" cy="330" r="20" fill="#ffffff" opacity="0.9">
+                <animate attributeName="r" values="20;24;20" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Reactor ring structure -->
+            <circle cx="200" cy="330" r="45" fill="none" stroke="#00ffff" stroke-width="2.5" opacity="0.7"/>
+            <circle cx="200" cy="330" r="36" fill="none" stroke="#00d9ff" stroke-width="2" opacity="0.5"/>
+            <circle cx="200" cy="330" r="28" fill="none" stroke="#0099ff" stroke-width="1.5" opacity="0.4"/>
+            <!-- Reactor spokes with glow -->
+            <line x1="200" y1="280" x2="200" y2="295" stroke="#00ffff" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+            <line x1="200" y1="365" x2="200" y2="380" stroke="#00ffff" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+            <line x1="150" y1="330" x2="165" y2="330" stroke="#00ffff" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+            <line x1="235" y1="330" x2="250" y2="330" stroke="#00ffff" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+            <!-- Diagonal spokes -->
+            <line x1="165" y1="295" x2="175" y2="305" stroke="#00d9ff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+            <line x1="235" y1="295" x2="225" y2="305" stroke="#00d9ff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+            <line x1="165" y1="365" x2="175" y2="355" stroke="#00d9ff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+            <line x1="235" y1="365" x2="225" y2="355" stroke="#00d9ff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+
+            <!-- Chest armor panels -->
+            <polygon points="95,290 105,300 105,350 95,360" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="1.5"/>
+            <polygon points="305,290 295,300 295,350 305,360" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="1.5"/>
+            <rect x="97" y="305" width="6" height="40" rx="1" fill="#00d9ff" opacity="0.2"/>
+            <rect x="297" y="305" width="6" height="40" rx="1" fill="#00d9ff" opacity="0.2"/>
+
+            <!-- Shoulder armor -->
+            <ellipse cx="85" cy="280" rx="20" ry="15" fill="url(#metalShine)" stroke="#00d9ff" stroke-width="2"/>
+            <ellipse cx="315" cy="280" rx="20" ry="15" fill="url(#metalShine)" stroke="#00d9ff" stroke-width="2"/>
+
+            <!-- ═══ ARMS with realistic joints ═══ -->
+            <!-- Left arm -->
+            <g id="left-arm">
+                <polygon points="65,270 45,280 35,310 45,340 65,350" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2.5"/>
+                <polygon points="50,285 48,295 48,325 50,335" fill="#3a3a52" opacity="0.3"/>
+                <circle cx="55" cy="310" r="20" fill="url(#metalShine)" stroke="#00d9ff" stroke-width="2.5"/>
+                <circle cx="55" cy="310" r="12" fill="#0a0a12" stroke="#00d9ff" stroke-width="1.5"/>
+                <circle cx="55" cy="310" r="6" fill="#00d9ff" opacity="0.4"/>
+                <circle cx="58" cy="307" r="3" fill="#4a4a66" opacity="0.7"/>
+                
+                <polygon points="45,340 30,395 50,410 65,350" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2.5"/>
+                <line x1="38" y1="360" x2="58" y2="360" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                <line x1="35" y1="380" x2="60" y2="380" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                
+                <circle cx="40" cy="410" r="14" fill="url(#metalShine)" stroke="#00d9ff" stroke-width="2.5"/>
+                <circle cx="40" cy="410" r="8" fill="#0a0a12"/>
+                <circle cx="40" cy="410" r="4" fill="#00d9ff" opacity="0.5"/>
+                
+                <polygon points="30,415 15,470 30,485 50,415" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="2.5"/>
+                <line x1="22" y1="435" x2="42" y2="435" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                
+                <!-- Hand/claw -->
+                <polygon points="15,470 5,480 10,495 25,490" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2"/>
+                <polygon points="20,475 10,485 15,498 27,493" fill="#0a0a12" stroke="#00d9ff" stroke-width="1.5"/>
+                <polygon points="25,475 20,485 25,500 35,495" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2"/>
+            </g>
+
+            <!-- Right arm (mirrored) -->
+            <g id="right-arm">
+                <polygon points="335,270 355,280 365,310 355,340 335,350" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2.5"/>
+                <polygon points="350,285 352,295 352,325 350,335" fill="#3a3a52" opacity="0.3"/>
+                <circle cx="345" cy="310" r="20" fill="url(#metalShine)" stroke="#00d9ff" stroke-width="2.5"/>
+                <circle cx="345" cy="310" r="12" fill="#0a0a12" stroke="#00d9ff" stroke-width="1.5"/>
+                <circle cx="345" cy="310" r="6" fill="#00d9ff" opacity="0.4"/>
+                <circle cx="342" cy="307" r="3" fill="#4a4a66" opacity="0.7"/>
+                
+                <polygon points="355,340 370,395 350,410 335,350" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2.5"/>
+                <line x1="362" y1="360" x2="342" y2="360" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                <line x1="365" y1="380" x2="340" y2="380" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                
+                <circle cx="360" cy="410" r="14" fill="url(#metalShine)" stroke="#00d9ff" stroke-width="2.5"/>
+                <circle cx="360" cy="410" r="8" fill="#0a0a12"/>
+                <circle cx="360" cy="410" r="4" fill="#00d9ff" opacity="0.5"/>
+                
+                <polygon points="370,415 385,470 370,485 350,415" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="2.5"/>
+                <line x1="378" y1="435" x2="358" y2="435" stroke="#00d9ff" stroke-width="1" opacity="0.2"/>
+                
+                <polygon points="385,470 395,480 390,495 375,490" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2"/>
+                <polygon points="380,475 390,485 385,498 373,493" fill="#0a0a12" stroke="#00d9ff" stroke-width="1.5"/>
+                <polygon points="375,475 380,485 375,500 365,495" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2"/>
+            </g>
+
+            <!-- ═══ NECK ═══ -->
+            <polygon points="165,250 155,270 245,270 235,250" fill="url(#metalShine)" stroke="#00d9ff" stroke-width="2.5"/>
+            <rect x="170" y="255" width="60" height="12" rx="4" fill="#0a0a12" stroke="#00d9ff" stroke-width="1"/>
+            <rect x="180" y="258" width="15" height="8" rx="2" fill="#00d9ff" opacity="0.3"/>
+            <rect x="205" y="258" width="15" height="8" rx="2" fill="#00d9ff" opacity="0.3"/>
+            <line x1="175" y1="261" x2="225" y2="261" stroke="#4a4a66" stroke-width="1" opacity="0.4"/>
+        </g>
+
+        <!-- ═══ HEAD (follows cursor) ═══ -->
+        <g id="robot-head">
+            <!-- Helmet with realistic shading -->
+            <polygon points="115,90 95,130 95,210 145,240 255,240 305,210 305,130 285,90" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="3.5"/>
+            <polygon points="125,105 110,135 110,200 150,225 250,225 290,200 290,135 275,105" fill="#0a0a12" stroke="#00d9ff" stroke-width="1.5"/>
+            
+            <!-- Helmet highlights -->
+            <polygon points="195,95 190,105 190,140 195,150 205,150 210,140 210,105 205,95" fill="#3a3a52" opacity="0.4"/>
+            <line x1="120" y1="110" x2="280" y2="110" stroke="#4a4a66" stroke-width="2" opacity="0.3"/>
+
+            <!-- Forehead crest -->
+            <polygon points="175,80 165,90 170,100 200,85 230,100 235,90 225,80" fill="url(#metalShine)" stroke="#00d9ff" stroke-width="2.5"/>
+            <polygon points="185,75 180,85 200,80 220,85 215,75" fill="#00ffff" opacity="0.8"/>
+            <circle cx="200" cy="80" r="4" fill="#00ffff" opacity="0.9"/>
+
+            <!-- Antenna with realistic glow -->
+            <polygon points="115,90 100,70 105,95" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="2.5"/>
+            <polygon points="285,90 300,70 295,95" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="2.5"/>
+            <line x1="102" y1="75" x2="102" y2="55" stroke="#00d9ff" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="298" y1="75" x2="298" y2="55" stroke="#00d9ff" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="102" cy="52" r="5" fill="url(#blueGlow)">
+                <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="298" cy="52" r="5" fill="url(#blueGlow)">
+                <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Face visor with depth -->
+            <polygon points="135,120 125,150 125,190 200,210 275,190 275,150 265,120" fill="#0d0d1a" stroke="#00d9ff" stroke-width="2.5"/>
+            <polygon points="140,125 132,150 132,185 200,203 268,185 268,150 260,125" fill="#050508" opacity="0.8"/>
+            
+            <!-- EYES - realistic glowing -->
+            <ellipse class="robot-eye robot-eye-l" cx="160" cy="155" rx="26" ry="18" fill="url(#blueGlow)"/>
+            <ellipse class="robot-eye robot-eye-r" cx="240" cy="155" rx="26" ry="18" fill="url(#blueGlow)"/>
+            <!-- Eye outer glow -->
+            <ellipse cx="160" cy="155" rx="32" ry="23" fill="#00d9ff" opacity="0.2"/>
+            <ellipse cx="240" cy="155" rx="32" ry="23" fill="#00d9ff" opacity="0.2"/>
+            <!-- Eye inner -->
+            <ellipse cx="160" cy="155" rx="18" ry="12" fill="#00ffff" opacity="0.9"/>
+            <ellipse cx="240" cy="155" rx="18" ry="12" fill="#00ffff" opacity="0.9"/>
+            <!-- Pupils -->
+            <circle id="pupil-l" cx="165" cy="155" r="9" fill="#003366"/>
+            <circle id="pupil-r" cx="235" cy="155" r="9" fill="#003366"/>
+            <!-- Eye glint -->
+            <circle cx="170" cy="150" r="4" fill="#ffffff" opacity="0.95"/>
+            <circle cx="245" cy="150" r="4" fill="#ffffff" opacity="0.95"/>
+            <circle cx="168" cy="152" r="2" fill="#00ffff" opacity="0.8"/>
+            <circle cx="243" cy="152" r="2" fill="#00ffff" opacity="0.8"/>
+
+            <!-- Cheek vents with depth -->
+            <rect x="130" y="165" width="22" height="4" rx="1" fill="#00d9ff" opacity="0.4"/>
+            <rect x="130" y="173" width="22" height="4" rx="1" fill="#00d9ff" opacity="0.3"/>
+            <rect x="130" y="181" width="22" height="4" rx="1" fill="#00d9ff" opacity="0.2"/>
+            <rect x="248" y="165" width="22" height="4" rx="1" fill="#00d9ff" opacity="0.4"/>
+            <rect x="248" y="173" width="22" height="4" rx="1" fill="#00d9ff" opacity="0.3"/>
+            <rect x="248" y="181" width="22" height="4" rx="1" fill="#00d9ff" opacity="0.2"/>
+
+            <!-- Mouth plate -->
+            <polygon points="165,185 160,195 160,205 200,210 240,205 240,195 235,185" fill="url(#metalDark)" stroke="#00d9ff" stroke-width="2.5"/>
+            <rect x="170" y="190" width="60" height="5" rx="2" fill="#00d9ff" opacity="0.3"/>
+            <rect x="170" y="198" width="60" height="5" rx="2" fill="#00d9ff" opacity="0.2"/>
+            <line x1="165" y1="193" x2="235" y2="193" stroke="#4a4a66" stroke-width="1" opacity="0.4"/>
+
+            <!-- Jaw detail -->
+            <line x1="125" y1="190" x2="145" y2="210" stroke="#00d9ff" stroke-width="2" opacity="0.5"/>
+            <line x1="275" y1="190" x2="255" y2="210" stroke="#00d9ff" stroke-width="2" opacity="0.5"/>
+
+            <!-- Ear panels with 3D -->
+            <rect x="95" y="140" width="18" height="55" rx="5" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="2.5"/>
+            <rect x="287" y="140" width="18" height="55" rx="5" fill="url(#metalLight)" stroke="#00d9ff" stroke-width="2.5"/>
+            <rect x="98" y="150" width="12" height="5" rx="1" fill="#00d9ff" opacity="0.4"/>
+            <rect x="98" y="162" width="12" height="5" rx="1" fill="#00d9ff" opacity="0.3"/>
+            <rect x="98" y="174" width="12" height="5" rx="1" fill="#00d9ff" opacity="0.2"/>
+            <rect x="290" y="150" width="12" height="5" rx="1" fill="#00d9ff" opacity="0.4"/>
+            <rect x="290" y="162" width="12" height="5" rx="1" fill="#00d9ff" opacity="0.3"/>
+            <rect x="290" y="174" width="12" height="5" rx="1" fill="#00d9ff" opacity="0.2"/>
+            
+            <!-- Ear highlights -->
+            <line x1="100" y1="145" x2="100" y2="190" stroke="#4a4a66" stroke-width="2" opacity="0.5"/>
+            <line x1="300" y1="145" x2="300" y2="190" stroke="#4a4a66" stroke-width="2" opacity="0.5"/>
+        </g>
+    </svg>
+</div>
