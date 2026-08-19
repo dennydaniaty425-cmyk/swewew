@@ -196,7 +196,6 @@
                     cropImage.src = event.target.result;
                     cropWrapper.style.display = 'block';
                     logoCropper = new Cropper(cropImage, {
-                        aspectRatio: 16 / 9,
                         viewMode: 1,
                         autoCropArea: 0.9,
                         responsive: true,

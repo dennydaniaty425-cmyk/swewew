@@ -13,7 +13,7 @@ if (Schema::hasTable('banners')) {
         @forelse($banners as $banner)
             <!-- Slide: {{ $banner->title }} -->
             <div class="slide fade">
-                <img src="{{ asset($banner->image_url) }}" alt="{{ $banner->title }}">
+                <img src="{{ route('media.show', ['path' => $banner->image_url]) }}" alt="{{ $banner->title }}">
             </div>
         @empty
             <!-- Default Slide - Tampil jika belum ada banner -->

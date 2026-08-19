@@ -33,7 +33,7 @@
 
                         @if($partner->logo_url)
                             <div class="image-preview-wrapper" style="margin-top: 12px;">
-                                <img src="{{ asset($partner->logo_url) }}" alt="{{ $partner->name }}" class="image-preview current-image-preview">
+                                <img src="{{ route('media.show', ['path' => $partner->logo_url]) }}" alt="{{ $partner->name }}" class="image-preview current-image-preview">
                             </div>
                         @endif
 
@@ -196,7 +196,6 @@
                     cropImage.src = event.target.result;
                     cropWrapper.style.display = 'block';
                     logoCropper = new Cropper(cropImage, {
-                        aspectRatio: 16 / 9,
                         viewMode: 1,
                         autoCropArea: 0.9,
                         responsive: true,

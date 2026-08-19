@@ -22,7 +22,7 @@
                     <div class="partner-grid">
                         @foreach($partners as $partner)
                             <div class="partner-card" data-aos="fade-up" data-aos-delay="{{ ($loop->index % 6) * 80 }}">
-                                <img src="{{ asset($partner->logo_url) }}" alt="{{ $partner->name }}" class="partner-logo">
+                                <img src="{{ route('media.show', ['path' => $partner->logo_url]) }}" alt="{{ $partner->name }}" class="partner-logo">
                             </div>
                         @endforeach
                     </div>

@@ -39,7 +39,7 @@
                                     <tr style="border-top: 1px solid var(--apotek-border);">
                                         <td style="padding: 12px;">{{ $partner->order ?? 0 }}</td>
                                         <td style="padding: 12px;">
-                                            <img src="{{ asset($partner->logo_url) }}" alt="{{ $partner->name }}" style="width: 120px; max-height: 70px; object-fit: contain; border-radius: 8px; background: rgba(255,255,255,0.04); padding: 8px;">
+                                            <img src="{{ route('media.show', ['path' => $partner->logo_url]) }}" alt="{{ $partner->name }}" style="width: 120px; max-height: 70px; object-fit: contain; border-radius: 8px; background: rgba(255,255,255,0.04); padding: 8px;">
                                         </td>
                                         <td style="padding: 12px; font-weight: 600;">{{ $partner->name }}</td>
                                         <td style="padding: 12px;">

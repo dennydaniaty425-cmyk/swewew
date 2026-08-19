@@ -46,7 +46,7 @@
                                         <td style="padding: 12px;">{{ $banner->order ?? '-' }}</td>
                                         <td style="padding: 12px;">{{ $banner->title }}</td>
                                         <td style="padding: 12px;">
-                                            <img src="{{ asset($banner->image_url) }}" alt="{{ $banner->title }}" style="height: 50px; object-fit: cover; border-radius: 4px;">
+                                            <img src="{{ route('media.show', ['path' => $banner->image_url]) }}" alt="{{ $banner->title }}" style="height: 50px; object-fit: cover; border-radius: 4px;">
                                         </td>
                                         <td style="padding: 12px;">
                                             <span style="padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; {{ $banner->is_active ? 'background-color: #d4edda; color: #155724;' : 'background-color: #f8d7da; color: #721c24;' }}">

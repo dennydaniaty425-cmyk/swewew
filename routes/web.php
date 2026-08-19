@@ -6,7 +6,6 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ProductController;
@@ -15,12 +14,20 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'apotek.home')->name('home');
 Route::get('/media/{path}', function (string $path) {
     $cleanPath = ltrim($path, '/');
-    $cleanPath = preg_replace('#^news/?#', '', $cleanPath);
-    $fullPath = storage_path('news/' . $cleanPath);
+    $isStorageMedia = str_starts_with($cleanPath, 'banner/') || str_starts_with($cleanPath, 'partners/');
+    $relativePath = $isStorageMedia
+        ? $cleanPath
+        : preg_replace('#^news/?#', '', $cleanPath);
+    $baseDirectory = $isStorageMedia ? storage_path() : storage_path('news');
+    $resolvedBase = realpath($baseDirectory);
+    $resolvedPath = realpath($baseDirectory.DIRECTORY_SEPARATOR.$relativePath);
 
-    abort_unless(file_exists($fullPath) && is_file($fullPath), 404);
+    abort_unless(
+        $resolvedBase && $resolvedPath && is_file($resolvedPath) && str_starts_with($resolvedPath, $resolvedBase.DIRECTORY_SEPARATOR),
+        404
+    );
 
-    return response()->file($fullPath);
+    return response()->file($resolvedPath);
 })->where('path', '.*')->name('media.show');
 Route::get('/konten/{content}', [ContentController::class, 'show'])->name('content.show');
 Route::get('/berita/{news}', [NewsController::class, 'show'])->name('news.show');
@@ -36,13 +43,13 @@ Route::post('/admin/logout', [AuthController::class, 'logout'])->name('auth.logo
 // Admin Dashboard (Protected)
 Route::middleware('auth')->group(function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-    
+
     // Banner Routes
     Route::resource('/admin/banner', BannerController::class, ['as' => 'admin']);
-    
+
     // Partner Routes
     Route::resource('/admin/partner', PartnerController::class, ['as' => 'admin']);
-    
+
     // Content Routes
     Route::resource('/admin/content', ContentController::class, ['as' => 'admin']);
 
