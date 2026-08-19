@@ -10,13 +10,17 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        User::firstOrCreate(
-            ['email' => 'admin@apotek.com'],
+        $admin = User::updateOrCreate(
+            ['email' => 'adminapotekalfa@alfa.com'],
             [
                 'name' => 'Admin Apotek',
-                'password' => Hash::make('admin123'),
+                'password' => Hash::make('123456789'),
             ]
         );
+
+        User::where('email', 'admin@apotek.com')
+            ->whereKeyNot($admin->getKey())
+            ->delete();
 
         $this->call([
             ProductSeeder::class,
