@@ -420,13 +420,23 @@
                 branch.setAttribute('role', 'button');
                 branch.setAttribute('tabindex', '0');
 
-                const openModal = function () {
-                    const branchSlug = branch.querySelector('.branch-name').textContent
-                        .replace(/^Alfa\s+/i, '')
-                        .trim()
-                        .toLowerCase()
-                        .replace(/\s+/g, '-');
+                const branchName = branch.querySelector('.branch-name').textContent;
+                const branchSlug = branchName
+                    .replace(/^Alfa\s+/i, '')
+                    .trim()
+                    .toLowerCase()
+                    .replace(/\s+/g, '-');
+                const viewButton = document.createElement('a');
+                viewButton.href = '/cabang/' + branchSlug;
+                viewButton.className = 'branch-view-button';
+                viewButton.textContent = 'Lihat';
+                viewButton.setAttribute('aria-label', 'Lihat detail ' + branchName);
+                viewButton.addEventListener('click', function (event) {
+                    event.stopPropagation();
+                });
+                branch.querySelector('.branch-info').appendChild(viewButton);
 
+                const openModal = function () {
                     window.location.href = '/cabang/' + branchSlug;
                 };
 

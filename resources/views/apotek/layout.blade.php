@@ -643,6 +643,29 @@
             flex-grow: 1;
         }
 
+        .branch-view-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 38px;
+            margin-top: 14px;
+            padding: 8px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.36);
+            border-radius: 8px;
+            background: #1238e8;
+            color: #ffffff !important;
+            font-size: 0.82rem;
+            font-weight: 800;
+            transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+        }
+
+        .branch-view-button:hover {
+            background: #0925bd;
+            box-shadow: 0 8px 16px rgba(18, 56, 232, 0.24);
+            transform: translateY(-2px);
+        }
+
         .pill-list {
             display: flex;
             flex-wrap: wrap;
