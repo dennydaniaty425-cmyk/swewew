@@ -11,18 +11,19 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <style>
         :root {
-            --apotek-bg: #071b1d;
-            --apotek-bg-soft: #0d2f31;
-            --apotek-card: #123a3b;
-            --apotek-primary: #47d6b0;
-            --apotek-primary-strong: #0ca58d;
-            --apotek-accent: #d7fff3;
-            --apotek-text: #effffc;
-            --apotek-muted: #a8cfca;
-            --apotek-border: rgba(120, 229, 211, 0.18);
-            --apotek-shadow: rgba(0, 0, 0, 0.35);
-            --apotek-success: #67e0b4;
-            --apotek-warning: #f4c95d;
+            --apotek-bg: #13d4cd;
+            --apotek-bg-soft: #19c8c5;
+            --apotek-card: rgba(8, 101, 103, 0.72);
+            --apotek-surface: rgba(5, 112, 115, 0.92);
+            --apotek-primary: #1238e8;
+            --apotek-primary-strong: #0925bd;
+            --apotek-accent: #ffffff;
+            --apotek-text: #ffffff;
+            --apotek-muted: #f2ffff;
+            --apotek-border: rgba(255, 255, 255, 0.25);
+            --apotek-shadow: rgba(0, 91, 100, 0.28);
+            --apotek-success: #ffffff;
+            --apotek-warning: #ff7b17;
         }
 
         * { box-sizing: border-box; }
@@ -32,7 +33,7 @@
         body {
             margin: 0;
             font-family: 'DM Sans', ui-sans-serif, sans-serif;
-            background: linear-gradient(180deg, #061719 0%, var(--apotek-bg) 100%);
+            background: linear-gradient(135deg, #18bdbb 0%, #12d8d0 62%, #0edfd5 100%);
             color: var(--apotek-text);
             line-height: 1.6;
             overflow-x: hidden;
@@ -40,6 +41,66 @@
 
         h1, h2, h3, .brand-name, .eyebrow, .btn, .stat strong {
             font-family: 'Manrope', 'DM Sans', sans-serif;
+        }
+
+        .section,
+        .page-shell,
+        main {
+            background: transparent;
+        }
+
+        .btn-primary,
+        .btn.btn-primary,
+        .btn-secondary:hover {
+            background: var(--apotek-primary) !important;
+            border-color: var(--apotek-primary) !important;
+            color: #ffffff !important;
+            box-shadow: 0 10px 20px rgba(18, 56, 232, 0.22);
+        }
+
+        .btn-secondary,
+        .btn.btn-secondary {
+            background: #ff7b17 !important;
+            border-color: #ff7b17 !important;
+            color: #ffffff !important;
+        }
+
+        .stat strong,
+        .hero-stat strong,
+        .eyebrow {
+            color: #ff7b17;
+        }
+
+        .section-head h2,
+        .hero h1,
+        .about-box h3,
+        .card h3,
+        .branch-name,
+        .news-title {
+            color: #ffffff;
+        }
+
+        .about-box,
+        .hero-card,
+        .contact-method-card,
+        .news-card,
+        .partner-card,
+        .branch-item {
+            background: rgba(6, 117, 119, 0.62) !important;
+            border-color: rgba(255, 255, 255, 0.26) !important;
+            box-shadow: 0 14px 30px rgba(0, 91, 100, 0.18);
+        }
+
+        .about-box:hover,
+        .branch-item:hover,
+        .news-card:hover {
+            background: rgba(5, 102, 105, 0.78) !important;
+            border-color: #ffffff !important;
+        }
+
+        footer {
+            background: rgba(4, 104, 106, 0.76) !important;
+            border-color: rgba(255, 255, 255, 0.28) !important;
         }
 
         a { color: inherit; text-decoration: none; }
@@ -653,6 +714,11 @@
             margin-bottom: 14px;
         }
 
+        .step svg {
+            width: 22px;
+            height: 22px;
+        }
+
         .cta-section {
             padding: 40px 0 90px;
         }
@@ -706,8 +772,6 @@
         @media (max-width: 900px) {
             .hero-grid,
             .about-grid,
-            .contact-grid,
-            .feature-grid,
             .info-grid,
             .process-grid {
                 grid-template-columns: 1fr;
@@ -792,8 +856,8 @@
 
             .nav a:hover,
             .nav a.active {
-                background: rgba(57, 208, 207, 0.12);
-                border-color: rgba(57, 208, 207, 0.34);
+                background: rgba(18, 56, 232, 0.82);
+                border-color: rgba(255, 255, 255, 0.3);
                 color: #ffffff;
             }
 
@@ -805,14 +869,15 @@
                 letter-spacing: 0.02em;
                 color: #041d20 !important;
                 font-weight: 900;
-                background: linear-gradient(135deg, #26f0b2 0%, #4fe2d8 100%);
-                box-shadow: 0 14px 26px rgba(31, 231, 165, 0.28);
+                background: #ff7b17 !important;
+                box-shadow: 0 14px 26px rgba(255, 123, 23, 0.28);
                 border: 1px solid rgba(255,255,255,0.18);
                 text-shadow: 0 1px 0 rgba(255,255,255,0.2);
             }
 
             .nav-cta:hover {
-                box-shadow: 0 18px 28px rgba(31, 231, 165, 0.36);
+                background: #e9670b !important;
+                box-shadow: 0 18px 28px rgba(255, 123, 23, 0.36);
             }
 
             .about-grid {
@@ -954,9 +1019,9 @@
         }
 
         .dot.active {
-            background: var(--apotek-primary);
-            box-shadow: 0 0 12px rgba(57, 208, 207, 0.6);
-            border-color: var(--apotek-primary);
+            background: #ffffff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+            border-color: #ffffff;
         }
 
         .dot:hover {
@@ -1305,6 +1370,208 @@
             background: rgba(57, 208, 207, 0.04);
         }
 
+        /* Reference palette: bright turquoise surfaces with blue and orange accents. */
+        header,
+        .site-header,
+        .hero,
+        .network-band,
+        .section,
+        .news-section,
+        .services-section,
+        .process-section,
+        .contact-section,
+        .page-about,
+        .partners-page,
+        .news-detail-page,
+        .branch-detail-page {
+            background: transparent !important;
+        }
+
+        header,
+        .site-header {
+            background: rgba(8, 164, 164, 0.7) !important;
+            border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+        }
+
+        .network-band {
+            background: rgba(8, 174, 174, 0.55) !important;
+            border-top-color: rgba(255, 255, 255, 0.22) !important;
+            border-bottom-color: rgba(255, 255, 255, 0.22) !important;
+        }
+
+        .service-card,
+        .process-card,
+        .news-card,
+        .contact-method-card,
+        .partner-card,
+        .about-box,
+        .branch-item,
+        .hero-card,
+        .mini-card,
+        .cta-box,
+        .news-empty,
+        .news-detail-card,
+        .branch-detail-card,
+        .auth-box,
+        .admin-card,
+        .admin-section {
+            background: rgba(5, 112, 115, 0.48) !important;
+            border-color: rgba(255, 255, 255, 0.28) !important;
+        }
+
+        .news-card-body,
+        .news-detail-body,
+        .about-box > div {
+            background: rgba(5, 112, 115, 0.28) !important;
+        }
+
+        .news-image-frame,
+        .news-media,
+        .branch-detail-media {
+            background: rgba(3, 137, 139, 0.42) !important;
+        }
+
+        .apotek-gallery-arrow,
+        .news-arrow,
+        .prev,
+        .next {
+            background: #ffffff !important;
+            border-color: rgba(255, 255, 255, 0.38) !important;
+            color: #087f73 !important;
+        }
+
+        .apotek-gallery,
+        .apotek-gallery-stage,
+        .news-empty,
+        .news-card-body,
+        .news-detail-card,
+        .news-detail-body,
+        .branch-detail-card,
+        .branch-detail-dialog {
+            background: rgba(5, 112, 115, 0.62) !important;
+        }
+
+        .apotek-gallery-stage {
+            border-color: rgba(255, 255, 255, 0.42) !important;
+        }
+
+        .apotek-gallery-stage::after {
+            border-color: #ff7b17 !important;
+            background: rgba(255, 123, 23, 0.24) !important;
+            box-shadow: 0 0 22px rgba(255, 123, 23, 0.3) !important;
+        }
+
+        .news-button {
+            background: var(--apotek-primary) !important;
+            box-shadow: 0 10px 18px rgba(18, 56, 232, 0.24) !important;
+        }
+
+        .network-kicker,
+        .network-cities a {
+            color: #ffffff !important;
+        }
+
+        .network-cities {
+            color: #ffffff !important;
+        }
+
+        .hero-eyebrow {
+            background: #1238e8 !important;
+            border-color: #1238e8 !important;
+            color: #ffffff !important;
+            box-shadow: 0 8px 18px rgba(18, 56, 232, 0.24);
+        }
+
+        .nav a {
+            position: relative;
+            transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+        }
+
+        .nav a:not(.nav-cta)::after {
+            position: absolute;
+            right: 18%;
+            bottom: 3px;
+            left: 18%;
+            height: 2px;
+            border-radius: 999px;
+            background: #ffffff;
+            content: '';
+            transform: scaleX(0);
+            transition: transform 180ms ease;
+        }
+
+        .nav a:not(.nav-cta):hover::after,
+        .nav a:not(.nav-cta).active::after {
+            transform: scaleX(1);
+        }
+
+        .nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(18, 56, 232, 0.2);
+        }
+
+        @media (max-width: 680px) {
+            .nav a:not(.nav-cta)::after {
+                display: none;
+            }
+
+            .nav a:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 6px 12px rgba(18, 56, 232, 0.18);
+            }
+        }
+
+        footer {
+            background: rgba(5, 125, 127, 0.72) !important;
+        }
+
+        body,
+        body p,
+        body li,
+        body label,
+        body td,
+        body th,
+        body .branch-address,
+        body .news-excerpt,
+        body .service-card p,
+        body .process-card p,
+        body .contact-method-card p {
+            color: #f5ffff !important;
+        }
+
+        body h1,
+        body h2,
+        body h3,
+        body h4,
+        body .brand-name,
+        body .branch-name,
+        body .news-title,
+        body .section-head h2 {
+            color: #ffffff !important;
+        }
+
+        body a,
+        body .nav-link,
+        body .network-cities span,
+        body .network-intro strong {
+            color: #ffffff;
+        }
+
+        main ul li::marker,
+        main ol li::marker {
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        body .eyebrow,
+        body .news-label,
+        body .news-detail-label,
+        body .network-kicker,
+        body .stat strong,
+        body .hero-stat strong {
+            color: #ffffff !important;
+        }
+
         @media (max-width: 680px) {
             .auth-box {
                 padding: 28px;
@@ -1356,6 +1623,7 @@
             <nav class="nav" aria-label="Main navigation">
                 <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
                 <a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">Tentang Kami</a>
+                <a href="{{ route('franchise') }}" class="{{ request()->routeIs('franchise') ? 'active' : '' }}">Franchise</a>
                 <a href="{{ route('partners') }}" class="{{ request()->routeIs('partners') ? 'active' : '' }}">Mitra Kami</a>
                 <a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Hubungi Kami</a>
 

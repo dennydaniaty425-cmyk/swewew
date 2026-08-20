@@ -32,6 +32,27 @@ Route::get('/media/{path}', function (string $path) {
 Route::get('/konten/{content}', [ContentController::class, 'show'])->name('content.show');
 Route::get('/berita/{news}', [NewsController::class, 'show'])->name('news.show');
 Route::view('/tentang-kami', 'apotek.about')->name('about');
+Route::view('/franchise', 'apotek.franchise')->name('franchise');
+Route::get('/cabang/{branch}', function (string $branch) {
+    $branches = [
+        'sintang' => ['name' => 'Alfa Sintang', 'logo' => 'Logo sintang.jpg', 'phone' => '0857-0593-5715', 'address' => 'Jl. MT. Haryono, Kapuas Kanan Hulu, Kec. Sintang, Kabupaten Sintang, Kalimantan Barat 78613'],
+        'air-upas' => ['name' => 'Alfa Air Upas', 'logo' => 'Logo Air upas.jpg', 'phone' => '0815-4923-3935', 'address' => 'MRMF+FM9, Air Upas, Kec. Air Upas, Kabupaten Ketapang, Kalimantan Barat 78863'],
+        'kendawangan' => ['name' => 'Alfa Kendawangan', 'logo' => 'Logo kendawangan.jpeg', 'phone' => '0822-5423-9530', 'address' => 'F6F8+44V, Jl. Pangeran Adi, Kendawangan Kiri, Kec. Kendawangan, Kabupaten Ketapang, Kalimantan Barat 78862'],
+        'balai-berkuak' => ['name' => 'Alfa Balai Berkuak', 'logo' => 'Logo balai berkuak.jpg', 'phone' => '0821-1442-2090', 'address' => 'Jl. Istana Jaya, Kelurahan Balai Pinang, Kec. Simpang Hulu, Kabupaten Ketapang, Kalimantan Barat 78854'],
+        'nanga-tayap' => ['name' => 'Alfa Nanga Tayap', 'logo' => 'Logo nangatayap.jpg', 'phone' => '0858-4926-3704', 'address' => 'FHG8+859, Nanga Tayap, Kec. Nanga Tayap, Kabupaten Ketapang, Kalimantan Barat 78873'],
+        'tumbang-titi' => ['name' => 'Alfa Tumbang Titi', 'logo' => 'Logo tumbang titi.jpg', 'phone' => '0858-2196-0187', 'address' => 'Jl. Kyai Yauma, Desa Tumbang Titi Baru, Kec. Tumbang Titi, Kabupaten Ketapang, Kalimantan Barat 78874'],
+        'sosok' => ['name' => 'Alfa Sosok', 'logo' => 'Logo Sosok.jpg', 'phone' => '0857-9603-2370', 'address' => 'Sosok, Kec. Tayan Hulu, Kabupaten Sanggau, Kalimantan Barat 78562'],
+        'bodok' => ['name' => 'Alfa Bodok', 'logo' => 'Logo bodok.jpg', 'phone' => '0831-9151-1444', 'address' => '6C5M+89Q, Palem Jaya, Kec. Parindu, Kabupaten Sanggau, Kalimantan Barat 78561'],
+        'kembayan' => ['name' => 'Alfa Kembayan', 'logo' => 'Logo kembayan.jpg', 'phone' => '0857-9603-2366', 'address' => 'APOTEK ALFA, Tj. Merpati, Kec. Kembayan, Kabupaten Sanggau, Kalimantan Barat 78516'],
+        'ambawang' => ['name' => 'Alfa Ambawang', 'logo' => 'Logo ambawang.jpg', 'phone' => '0851-1941-3105', 'address' => 'Jl. Trans Kalimantan, Desa Jawa Tengah, Kec. Sungai Ambawang, Kabupaten Kubu Raya, Kalimantan Barat 78319'],
+        'jungkat' => ['name' => 'Alfa Jungkat', 'logo' => 'Logo jungkat.jpg', 'phone' => '0857-5497-9060', 'address' => 'Jl. Raya Jungkat, Sei Nipah, Kec. Jongkat, Kab. Mempawah, Kalimantan Barat 78351'],
+        'mempawah' => ['name' => 'Alfa Mempawah', 'logo' => 'Logo mempawah.jpg', 'phone' => '0858-2071-2029', 'address' => 'Jl. Sujarwo, Terusan, Kec. Mempawah Hilir, Kab. Mempawah, Kalimantan Barat 78912'],
+    ];
+
+    abort_unless(isset($branches[$branch]), 404);
+
+    return view('apotek.branch-detail', ['branch' => $branches[$branch]]);
+})->name('branch.show');
 Route::get('/mitra-kami', [PartnerController::class, 'publicIndex'])->name('partners');
 Route::view('/hubungi-kami', 'apotek.contact')->name('contact');
 

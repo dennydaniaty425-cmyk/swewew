@@ -7,7 +7,7 @@
         <section class="hero">
             <div class="container hero-grid">
                 <div data-aos="fade-up">
-                    <div class="eyebrow">Jaringan kesehatan terpercaya</div>
+                    <div class="eyebrow hero-eyebrow">Jaringan kesehatan terpercaya</div>
                     <h1>Apotek Alfa Group</h1>
                     <p>
                         Satu jaringan untuk kebutuhan kesehatan keluarga. Temukan obat, vitamin, produk perawatan,
@@ -15,7 +15,7 @@
                     </p>
 
                     <div class="button-row">
-                        <a href="https://wa.me/6282114422093?text=Halo%20Apotek%20Alfa%20Group%2C%20saya%20ingin%20bergabung%20sebagai%20mitra.%20Tolong%20berikan%20informasi%20lebih%20lanjut." class="btn btn-primary" target="_blank" rel="noopener">Gabung Mitra</a>
+                        <a href="{{ route('franchise') }}" class="btn btn-primary">Gabung Mitra</a>
                         <a href="{{ route('contact') }}" class="btn btn-secondary">Hubungi Kami</a>
                     </div>
 
@@ -225,22 +225,22 @@
 
                 <div class="process-grid">
                     <article class="process-card" data-aos="fade-up" data-aos-delay="0">
-                        <div class="step">1</div>
+                        <div class="step" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4l4 3 4-3h4a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 12H15.3L12 18.5 8.7 16H4V6h16v10zM6 8h12v2H6V8zm0 4h8v2H6v-2z"/></svg></div>
                         <h3>Konsultasi</h3>
                         <p>Jelaskan kebutuhan kesehatan Anda kepada tim kami.</p>
                     </article>
                     <article class="process-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="step">2</div>
+                        <div class="step" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm7 18H5V5h2v3h10V5h2v16zM7 11h10v2H7v-2zm0 4h7v2H7v-2z"/></svg></div>
                         <h3>Rekomendasi</h3>
                         <p>Apoteker kami akan merekomendasikan produk sesuai kondisi Anda.</p>
                     </article>
                     <article class="process-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="step">3</div>
+                        <div class="step" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m20.5 7.5-8-4a1 1 0 0 0-.9 0l-8 4A1 1 0 0 0 3 8.4v7.2a1 1 0 0 0 .6.9l8 4a1 1 0 0 0 .9 0l8-4a1 1 0 0 0 .6-.9V8.4a1 1 0 0 0-.6-.9zM12 5.5 17.8 8 12 10.9 6.2 8 12 5.5zM5 10l6 3v5l-6-3v-5zm8 8v-5l6-3v5l-6 3z"/></svg></div>
                         <h3>Persiapan</h3>
                         <p>Kami menyiapkan produk dengan cepat dan aman.</p>
                     </article>
                     <article class="process-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="step">4</div>
+                        <div class="step" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 8h-3V4H3a2 2 0 0 0-2 2v11h2a3 3 0 1 0 6 0h6a3 3 0 1 0 6 0h2v-5l-3-4zM6 19.5A1.5 1.5 0 1 1 6 16.5a1.5 1.5 0 0 1 0 3zm9-4.5H8.8a3 3 0 0 0-5.8 0V6h12v9zm3 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM17 10h2l1.5 2H17v-2z"/></svg></div>
                         <h3>Pengiriman</h3>
                         <p>Produk sampai tepat waktu dengan layanan yang ramah.</p>
                     </article>
@@ -390,7 +390,7 @@
         .apotek-gallery-dot.is-active {
             width: 26px;
             border-radius: 999px;
-            background: var(--apotek-primary);
+            background: #ffffff;
         }
 
         @media (max-width: 680px) {

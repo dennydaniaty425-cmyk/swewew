@@ -42,11 +42,7 @@
                         <div class="branch-grid">
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo sintang.jpg') }}" alt="Logo Alfa Sintang">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Sintang</span>
@@ -55,11 +51,7 @@
                             </div>
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo Air upas.jpg') }}" alt="Logo Alfa Air Upas">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Air Upas</span>
@@ -68,11 +60,7 @@
                             </div>
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo kendawangan.jpeg') }}" alt="Logo Alfa Kendawangan">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Kendawangan</span>
@@ -81,11 +69,7 @@
                             </div>
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo balai berkuak.jpg') }}" alt="Logo Alfa Balai Berkuak">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Balai Berkuak</span>
@@ -94,11 +78,7 @@
                             </div>
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo nangatayap.jpg') }}" alt="Logo Alfa Nanga Tayap">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Nanga Tayap</span>
@@ -107,11 +87,7 @@
                             </div>
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo tumbang titi.jpg') }}" alt="Logo Alfa Tumbang Titi">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Tumbang Titi</span>
@@ -120,11 +96,7 @@
                             </div>
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo Sosok.jpg') }}" alt="Logo Alfa Sosok">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Sosok</span>
@@ -133,11 +105,7 @@
                             </div>
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo bodok.jpg') }}" alt="Logo Alfa Bodok">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Bodok</span>
@@ -146,11 +114,7 @@
                             </div>
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo kembayan.jpg') }}" alt="Logo Alfa Kembayan">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Kembayan</span>
@@ -159,11 +123,7 @@
                             </div>
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo ambawang.jpg') }}" alt="Logo Alfa Ambawang">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Ambawang</span>
@@ -172,11 +132,7 @@
                             </div>
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo jungkat.jpg') }}" alt="Logo Alfa Jungkat">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Jungkat</span>
@@ -185,15 +141,52 @@
                             </div>
                             <div class="branch-item">
                                 <div class="branch-image">
-                                    <div class="branch-image-placeholder">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="{{ asset('Logo mempawah.jpg') }}" alt="Logo Alfa Mempawah">
                                 </div>
                                 <div class="branch-info">
                                     <span class="branch-name">Alfa Mempawah</span>
                                     <div class="branch-address">Jl. Sujarwo, Terusan, Kec. Mempawah Hilir, Kab. Mempawah, Kalimantan Barat 78912</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="branch-detail-modal" id="branch-detail-modal" aria-hidden="true">
+                        <div class="branch-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="branch-detail-title">
+                            <button type="button" class="branch-detail-close" aria-label="Tutup detail cabang">&times;</button>
+                            <div class="branch-detail-heading">
+                                <img src="" alt="" class="branch-detail-logo" id="branch-detail-logo">
+                                <div>
+                                    <div class="eyebrow">Detail cabang</div>
+                                    <h3 id="branch-detail-title"></h3>
+                                    <p id="branch-detail-address"></p>
+                                </div>
+                            </div>
+
+                            <div class="branch-detail-section">
+                                <h4>Ikuti cabang kami</h4>
+                                <div class="branch-social-links">
+                                    <a href="https://www.tiktok.com/@aptalfagroup" target="_blank" rel="noopener" aria-label="TikTok Apotek Alfa Group" class="branch-social-link branch-social-tiktok">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.7 3c.3 1.8 1.3 3.2 3.3 3.8v3.1c-1.2-.1-2.3-.5-3.3-1.1v6.3c0 3.2-2.5 5.7-5.7 5.7-3.1 0-5.5-2.3-5.5-5.3 0-3.1 2.5-5.5 5.7-5.5.3 0 .6 0 .9.1v3.1c-.3-.1-.6-.2-.9-.2-1.4 0-2.5 1-2.5 2.4 0 1.3 1 2.3 2.4 2.3 1.5 0 2.5-1.1 2.5-2.7V3h3.1z"/></svg>
+                                        <span>TikTok</span>
+                                    </a>
+                                    <a href="https://www.instagram.com/alfa_kencana_sukses/" target="_blank" rel="noopener" aria-label="Instagram Apotek Alfa Group" class="branch-social-link branch-social-instagram">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                                        <span>Instagram</span>
+                                    </a>
+                                    <a href="https://shopee.co.id/search?keyword=apotek%20alfa%20group" target="_blank" rel="noopener" aria-label="Shopee Apotek Alfa Group" class="branch-social-link branch-social-shopee">
+                                        <img src="{{ asset('logoshopee.jpeg') }}" alt="">
+                                        <span>Shopee</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="branch-detail-section">
+                                <h4>Foto apotek</h4>
+                                <div class="branch-photo-grid" aria-label="Galeri foto cabang">
+                                    <div class="branch-photo-slot">Foto cabang segera hadir</div>
+                                    <div class="branch-photo-slot">Foto cabang segera hadir</div>
+                                    <div class="branch-photo-slot">Foto cabang segera hadir</div>
                                 </div>
                             </div>
                         </div>
@@ -230,6 +223,174 @@
     </main>
 
     <style>
+        .page-about .branch-item {
+            cursor: pointer;
+        }
+
+        .page-about .branch-item:focus-visible {
+            outline: 3px solid var(--apotek-primary);
+            outline-offset: 3px;
+        }
+
+        .branch-detail-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: block;
+            overflow-y: auto;
+            background: rgba(10, 24, 30, 0.72);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 180ms ease;
+        }
+
+        .branch-detail-modal.is-open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .branch-detail-dialog {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 56px clamp(22px, 6vw, 96px) 48px;
+            border: 0;
+            border-radius: 0;
+            background: var(--apotek-surface);
+            transform: translateY(20px);
+            transition: transform 180ms ease;
+        }
+
+        .branch-detail-modal.is-open .branch-detail-dialog {
+            transform: translateY(0);
+        }
+
+        .branch-detail-close {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--apotek-border);
+            border-radius: 50%;
+            background: transparent;
+            color: var(--apotek-text);
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .branch-detail-heading {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            padding-right: 38px;
+        }
+
+        .branch-detail-logo {
+            width: 96px;
+            height: 96px;
+            flex: 0 0 96px;
+            object-fit: cover;
+            border-radius: 14px;
+            border: 1px solid var(--apotek-border);
+        }
+
+        .branch-detail-heading h3 {
+            margin: 3px 0 7px;
+            color: var(--apotek-text);
+        }
+
+        .branch-detail-heading p {
+            margin: 0;
+            color: var(--apotek-muted);
+            line-height: 1.5;
+        }
+
+        .branch-detail-section {
+            width: min(100%, 980px);
+            margin: 34px auto 0;
+        }
+
+        .branch-detail-section h4 {
+            margin: 0 0 12px;
+            color: var(--apotek-text);
+        }
+
+        .branch-social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .branch-social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 42px;
+            padding: 8px 13px;
+            border-radius: 9px;
+            color: #fff;
+            font-size: 0.84rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .branch-social-link svg,
+        .branch-social-link img {
+            width: 22px;
+            height: 22px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .branch-social-tiktok { background: #111; }
+        .branch-social-instagram { background: linear-gradient(135deg, #feda75, #d62976 52%, #4f5bd5); }
+        .branch-social-shopee { background: #ee4d2d; }
+
+        .branch-photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .branch-photo-slot {
+            display: grid;
+            min-height: clamp(180px, 28vw, 320px);
+            place-items: center;
+            padding: 14px;
+            border: 1px dashed var(--apotek-primary);
+            border-radius: 10px;
+            background: rgba(57, 208, 207, 0.06);
+            color: var(--apotek-muted);
+            font-size: 0.78rem;
+            text-align: center;
+        }
+
+        @media (min-width: 720px) {
+            .branch-detail-heading {
+                width: min(100%, 980px);
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .branch-detail-heading {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .branch-detail-logo {
+                width: 112px;
+                height: 112px;
+                flex-basis: 112px;
+            }
+
+            .branch-photo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .page-about .branch-image-placeholder {
             background-image: url("{{ asset('foto apotek.jpeg') }}");
             background-position: center;
@@ -241,4 +402,54 @@
             display: none;
         }
     </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('branch-detail-modal');
+            const closeButton = modal.querySelector('.branch-detail-close');
+            const title = document.getElementById('branch-detail-title');
+            const address = document.getElementById('branch-detail-address');
+            const logo = document.getElementById('branch-detail-logo');
+
+            const closeModal = function () {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+            };
+
+            document.querySelectorAll('.branch-item').forEach(function (branch) {
+                branch.setAttribute('role', 'button');
+                branch.setAttribute('tabindex', '0');
+
+                const openModal = function () {
+                    const branchSlug = branch.querySelector('.branch-name').textContent
+                        .replace(/^Alfa\s+/i, '')
+                        .trim()
+                        .toLowerCase()
+                        .replace(/\s+/g, '-');
+
+                    window.location.href = '/cabang/' + branchSlug;
+                };
+
+                branch.addEventListener('click', openModal);
+                branch.addEventListener('keydown', function (event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        openModal();
+                    }
+                });
+            });
+
+            closeButton.addEventListener('click', closeModal);
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 @endsection
