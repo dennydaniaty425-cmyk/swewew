@@ -26,13 +26,17 @@
                     <section class="branch-detail-section">
                         <h2>Ikuti cabang kami</h2>
                         <div class="branch-social-links">
-                            <a href="https://www.tiktok.com/@aptalfagroup" target="_blank" rel="noopener" class="branch-social-link branch-social-tiktok">
+                            <a href="{{ $branch['tiktok'] }}" target="_blank" rel="noopener" class="branch-social-link branch-social-tiktok">
                                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.7 3c.3 1.8 1.3 3.2 3.3 3.8v3.1c-1.2-.1-2.3-.5-3.3-1.1v6.3c0 3.2-2.5 5.7-5.7 5.7-3.1 0-5.5-2.3-5.5-5.3 0-3.1 2.5-5.5 5.7-5.5.3 0 .6 0 .9.1v3.1c-.3-.1-.6-.2-.9-.2-1.4 0-2.5 1-2.5 2.4 0 1.3 1 2.3 2.4 2.3 1.5 0 2.5-1.1 2.5-2.7V3h3.1z"/></svg>
                                 TikTok
                             </a>
-                            <a href="https://www.instagram.com/alfa_kencana_sukses/" target="_blank" rel="noopener" class="branch-social-link branch-social-instagram">
+                            <a href="{{ $branch['instagram'] }}" target="_blank" rel="noopener" class="branch-social-link branch-social-instagram">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
                                 Instagram
+                            </a>
+                            <a href="{{ $branch['maps'] }}" target="_blank" rel="noopener" aria-label="Google Maps {{ $branch['name'] }}" class="branch-social-link branch-social-maps">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M12 2.5c-3.9 0-7 3.1-7 7 0 5.2 7 12 7 12s7-6.8 7-12c0-3.9-3.1-7-7-7z"/><path fill="#4285f4" d="M12 2.5c-1.7 0-3.2.6-4.4 1.6l4.4 3.8 4.4-3.8A6.9 6.9 0 0 0 12 2.5z"/><circle cx="12" cy="9.5" r="2.4" fill="#ea4335"/><circle cx="12" cy="9.5" r="1.1" fill="#fff"/></svg>
+                                Google Maps
                             </a>
                             <a href="https://shopee.co.id/search?keyword=apotek%20alfa%20group" target="_blank" rel="noopener" class="branch-social-link branch-social-shopee">
                                 <img src="{{ asset('logoshopee.jpeg') }}" alt="">
@@ -55,6 +59,30 @@
                             @elseif($branch['name'] === 'Alfa Kendawangan')
                                 @foreach(range(1, 5) as $photoNumber)
                                     <img src="{{ asset('KENDAWANGAN ('.$photoNumber.').jpeg') }}" alt="Foto Apotek Alfa Kendawangan {{ $photoNumber }}" class="branch-photo">
+                                @endforeach
+                            @elseif($branch['name'] === 'Alfa Mempawah')
+                                @foreach(range(1, 3) as $photoNumber)
+                                    <img src="{{ asset('mempawah ('.$photoNumber.').jpeg') }}" alt="Foto Apotek Alfa Mempawah {{ $photoNumber }}" class="branch-photo">
+                                @endforeach
+                            @elseif($branch['name'] === 'Alfa Kembayan')
+                                @foreach(range(1, 2) as $photoNumber)
+                                    <img src="{{ asset('kembayan ('.$photoNumber.').jpeg') }}" alt="Foto Apotek Alfa Kembayan {{ $photoNumber }}" class="branch-photo">
+                                @endforeach
+                            @elseif($branch['name'] === 'Alfa Balai Berkuak')
+                                @foreach(range(1, 5) as $photoNumber)
+                                    <img src="{{ asset('balai berkuak ('.$photoNumber.').jpeg') }}" alt="Foto Apotek Alfa Balai Berkuak {{ $photoNumber }}" class="branch-photo">
+                                @endforeach
+                            @elseif($branch['name'] === 'Alfa Ambawang')
+                                @foreach(range(1, 4) as $photoNumber)
+                                    <img src="{{ asset('ambawang ('.$photoNumber.').jpeg') }}" alt="Foto Apotek Alfa Ambawang {{ $photoNumber }}" class="branch-photo">
+                                @endforeach
+                            @elseif($branch['name'] === 'Alfa Bodok')
+                                @foreach(range(1, 2) as $photoNumber)
+                                    <img src="{{ asset('bodok ('.$photoNumber.').jpeg') }}" alt="Foto Apotek Alfa Bodok {{ $photoNumber }}" class="branch-photo">
+                                @endforeach
+                            @elseif($branch['name'] === 'Alfa Sosok')
+                                @foreach(range(1, 2) as $photoNumber)
+                                    <img src="{{ asset('sosok ('.$photoNumber.').jpeg') }}" alt="Foto Apotek Alfa Sosok {{ $photoNumber }}" class="branch-photo">
                                 @endforeach
                             @else
                                 <div class="branch-photo-slot">Foto cabang segera hadir</div>
@@ -194,6 +222,7 @@
 
         .branch-social-tiktok { background: #111; }
         .branch-social-instagram { background: linear-gradient(135deg, #feda75, #d62976 52%, #4f5bd5); }
+        .branch-social-maps { background: #fff; color: #3c4043; }
         .branch-social-shopee { background: #ee4d2d; }
 
         .branch-photo-grid {

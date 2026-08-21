@@ -35,19 +35,38 @@ Route::view('/tentang-kami', 'apotek.about')->name('about');
 Route::view('/franchise', 'apotek.franchise')->name('franchise');
 Route::get('/cabang/{branch}', function (string $branch) {
     $branches = [
-        'sintang' => ['name' => 'Alfa Sintang', 'logo' => 'Logo sintang.jpg', 'phone' => '0857-0593-5715', 'address' => 'Jl. MT. Haryono, Kapuas Kanan Hulu, Kec. Sintang, Kabupaten Sintang, Kalimantan Barat 78613'],
-        'air-upas' => ['name' => 'Alfa Air Upas', 'logo' => 'Logo Air upas.jpg', 'phone' => '0815-4923-3935', 'address' => 'MRMF+FM9, Air Upas, Kec. Air Upas, Kabupaten Ketapang, Kalimantan Barat 78863'],
-        'kendawangan' => ['name' => 'Alfa Kendawangan', 'logo' => 'Logo kendawangan.jpeg', 'phone' => '0822-5423-9530', 'address' => 'F6F8+44V, Jl. Pangeran Adi, Kendawangan Kiri, Kec. Kendawangan, Kabupaten Ketapang, Kalimantan Barat 78862'],
-        'balai-berkuak' => ['name' => 'Alfa Balai Berkuak', 'logo' => 'Logo balai berkuak.jpg', 'phone' => '0821-1442-2090', 'address' => 'Jl. Istana Jaya, Kelurahan Balai Pinang, Kec. Simpang Hulu, Kabupaten Ketapang, Kalimantan Barat 78854'],
-        'nanga-tayap' => ['name' => 'Alfa Nanga Tayap', 'logo' => 'Logo nangatayap.jpg', 'phone' => '0858-4926-3704', 'address' => 'FHG8+859, Nanga Tayap, Kec. Nanga Tayap, Kabupaten Ketapang, Kalimantan Barat 78873'],
-        'tumbang-titi' => ['name' => 'Alfa Tumbang Titi', 'logo' => 'Logo tumbang titi.jpg', 'phone' => '0858-2196-0187', 'address' => 'Jl. Kyai Yauma, Desa Tumbang Titi Baru, Kec. Tumbang Titi, Kabupaten Ketapang, Kalimantan Barat 78874'],
-        'sosok' => ['name' => 'Alfa Sosok', 'logo' => 'Logo Sosok.jpg', 'phone' => '0857-9603-2370', 'address' => 'Sosok, Kec. Tayan Hulu, Kabupaten Sanggau, Kalimantan Barat 78562'],
-        'bodok' => ['name' => 'Alfa Bodok', 'logo' => 'Logo bodok.jpg', 'phone' => '0831-9151-1444', 'address' => '6C5M+89Q, Palem Jaya, Kec. Parindu, Kabupaten Sanggau, Kalimantan Barat 78561'],
-        'kembayan' => ['name' => 'Alfa Kembayan', 'logo' => 'Logo kembayan.jpg', 'phone' => '0857-9603-2366', 'address' => 'APOTEK ALFA, Tj. Merpati, Kec. Kembayan, Kabupaten Sanggau, Kalimantan Barat 78516'],
-        'ambawang' => ['name' => 'Alfa Ambawang', 'logo' => 'Logo ambawang.jpg', 'phone' => '0851-1941-3105', 'address' => 'Jl. Trans Kalimantan, Desa Jawa Tengah, Kec. Sungai Ambawang, Kabupaten Kubu Raya, Kalimantan Barat 78319'],
-        'jungkat' => ['name' => 'Alfa Jungkat', 'logo' => 'Logo jungkat.jpg', 'phone' => '0857-5497-9060', 'address' => 'Jl. Raya Jungkat, Sei Nipah, Kec. Jongkat, Kab. Mempawah, Kalimantan Barat 78351'],
-        'mempawah' => ['name' => 'Alfa Mempawah', 'logo' => 'Logo mempawah.jpg', 'phone' => '0858-2071-2029', 'address' => 'Jl. Sujarwo, Terusan, Kec. Mempawah Hilir, Kab. Mempawah, Kalimantan Barat 78912'],
+        'sintang' => ['name' => 'Alfa Sintang', 'logo' => 'Logo sintang.jpg', 'phone' => '0857-0593-5715', 'instagram' => 'https://www.instagram.com/apotekalfasintang/', 'tiktok' => 'https://www.tiktok.com/@apotekalfasintang', 'address' => 'Jl. MT. Haryono, Kapuas Kanan Hulu, Kec. Sintang, Kabupaten Sintang, Kalimantan Barat 78613'],
+        'air-upas' => ['name' => 'Alfa Air Upas', 'logo' => 'Logo Air upas.jpg', 'phone' => '0815-4923-3935', 'instagram' => 'https://www.instagram.com/apotek_alfaairupas/', 'tiktok' => 'https://www.tiktok.com/@apotekalfaairupas', 'address' => 'MRMF+FM9, Air Upas, Kec. Air Upas, Kabupaten Ketapang, Kalimantan Barat 78863'],
+        'kendawangan' => ['name' => 'Alfa Kendawangan', 'logo' => 'Logo kendawangan.jpeg', 'phone' => '0822-5423-9530', 'instagram' => 'https://www.instagram.com/apotek_alfakendawangann/', 'tiktok' => 'https://www.tiktok.com/@apotekalfakendawangan', 'address' => 'F6F8+44V, Jl. Pangeran Adi, Kendawangan Kiri, Kec. Kendawangan, Kabupaten Ketapang, Kalimantan Barat 78862'],
+        'balai-berkuak' => ['name' => 'Alfa Balai Berkuak', 'logo' => 'Logo balai berkuak.jpg', 'phone' => '0821-1442-2090', 'instagram' => 'https://www.instagram.com/apotek.alfabalaiberkuak/', 'tiktok' => 'https://www.tiktok.com/@apotekalfabalaiberkuak', 'address' => 'Jl. Istana Jaya, Kelurahan Balai Pinang, Kec. Simpang Hulu, Kabupaten Ketapang, Kalimantan Barat 78854'],
+        'nanga-tayap' => ['name' => 'Alfa Nanga Tayap', 'logo' => 'Logo nangatayap.jpg', 'phone' => '0858-4926-3704', 'instagram' => 'https://www.instagram.com/apotek_alfa_tayap/', 'tiktok' => 'https://www.tiktok.com/@apotekalfanangatayap', 'address' => 'FHG8+859, Nanga Tayap, Kec. Nanga Tayap, Kabupaten Ketapang, Kalimantan Barat 78873'],
+        'tumbang-titi' => ['name' => 'Alfa Tumbang Titi', 'logo' => 'Logo tumbang titi.jpg', 'phone' => '0858-2196-0187', 'instagram' => 'https://www.instagram.com/apotek.alfatumbangtiti/', 'tiktok' => 'https://www.tiktok.com/@apotek_alfatumbangtiti', 'address' => 'Jl. Kyai Yauma, Desa Tumbang Titi Baru, Kec. Tumbang Titi, Kabupaten Ketapang, Kalimantan Barat 78874'],
+        'sosok' => ['name' => 'Alfa Sosok', 'logo' => 'Logo Sosok.jpg', 'phone' => '0857-9603-2370', 'instagram' => 'https://www.instagram.com/apotek_alfasosok/', 'tiktok' => 'https://www.tiktok.com/@apotek_alfasosok', 'address' => 'Sosok, Kec. Tayan Hulu, Kabupaten Sanggau, Kalimantan Barat 78562'],
+        'bodok' => ['name' => 'Alfa Bodok', 'logo' => 'Logo bodok.jpg', 'phone' => '0831-9151-1444', 'instagram' => 'https://www.instagram.com/apotek_alfabodok/', 'tiktok' => 'https://www.tiktok.com/@apotekalfaabodok', 'address' => '6C5M+89Q, Palem Jaya, Kec. Parindu, Kabupaten Sanggau, Kalimantan Barat 78561'],
+        'kembayan' => ['name' => 'Alfa Kembayan', 'logo' => 'Logo kembayan.jpg', 'phone' => '0857-9603-2366', 'instagram' => 'https://www.instagram.com/apotek_alfakembayan/', 'tiktok' => 'https://www.tiktok.com/@apotek_alfakembayan', 'address' => 'APOTEK ALFA, Tj. Merpati, Kec. Kembayan, Kabupaten Sanggau, Kalimantan Barat 78516'],
+        'ambawang' => ['name' => 'Alfa Ambawang', 'logo' => 'Logo ambawang.jpg', 'phone' => '0851-1941-3105', 'instagram' => 'https://www.instagram.com/apotek_alfaambawang/', 'tiktok' => 'https://www.tiktok.com/@apotekalfaambawang', 'address' => 'Jl. Trans Kalimantan, Desa Jawa Tengah, Kec. Sungai Ambawang, Kabupaten Kubu Raya, Kalimantan Barat 78319'],
+        'jungkat' => ['name' => 'Alfa Jungkat', 'logo' => 'Logo jungkat.jpg', 'phone' => '0857-5497-9060', 'instagram' => 'https://www.instagram.com/apotek_alfajungkat/', 'tiktok' => 'https://www.tiktok.com/@apotek_alfajungkat', 'address' => 'Jl. Raya Jungkat, Sei Nipah, Kec. Jongkat, Kab. Mempawah, Kalimantan Barat 78351'],
+        'mempawah' => ['name' => 'Alfa Mempawah', 'logo' => 'Logo mempawah.jpg', 'phone' => '0858-2071-2029', 'instagram' => 'https://www.instagram.com/apotek_alfamempawah/', 'tiktok' => 'https://www.tiktok.com/@apotek_alfamempawah', 'address' => 'Jl. Sujarwo, Terusan, Kec. Mempawah Hilir, Kab. Mempawah, Kalimantan Barat 78912'],
     ];
+
+    $mapQueries = [
+        'sintang' => 'Jl. MT. Haryono, Kapuas Kanan Hulu, Kec. Sintang, Kab. Sintang, Kalimantan Barat 78613',
+        'air-upas' => 'MRMF+FM9, Air Upas, Kec. Air Upas, Kab. Ketapang, Kalimantan Barat 78863',
+        'kendawangan' => 'F6F8+44V, Jl. Pangeran Adi, Kendawangan Kiri, Kab. Ketapang, Kalimantan Barat 78862',
+        'balai-berkuak' => 'Jl. Istana Jaya, Kel. Balai Pinang, Kec. Simpang Hulu, Kab. Ketapang, Kalimantan Barat',
+        'nanga-tayap' => 'FHG8+859, Nanga Tayap, Kec. Nanga Tayap, Kab. Ketapang, Kalimantan Barat 78873',
+        'tumbang-titi' => '5JC6+QV7, Tumbang Titi, Kec. Tumbang Titi, Kab. Ketapang, Kalimantan Barat 78874',
+        'sosok' => 'Sosok, Kec. Tayan Hulu, Kab. Sanggau, Kalimantan Barat 78562',
+        'bodok' => '6C5M+89Q, Palem Jaya, Kec. Parindu, Kab. Sanggau, Kalimantan Barat 78561',
+        'kembayan' => 'Apotek Alfa, Tanjung Merpati, Kec. Kembayan, Kab. Sanggau, Kalimantan Barat 78516',
+        'ambawang' => 'Jl. Trans Kalimantan, Desa Jawa Tengah, Kec. Sungai Ambawang, Kab. Kubu Raya, Kalimantan Barat 78319',
+        'jungkat' => 'Jl. Raya Jungkat, Sei Nipah, Kab. Mempawah, Kalimantan Barat 78351',
+        'mempawah' => 'Jl. Sujarwo, Terusan, Kec. Mempawah Hilir, Kab. Mempawah, Kalimantan Barat 78912',
+    ];
+
+    foreach ($branches as $slug => $branchData) {
+        $branches[$slug]['maps'] = 'https://www.google.com/maps/search/?api=1&query='.urlencode($mapQueries[$slug]);
+    }
 
     abort_unless(isset($branches[$branch]), 404);
 
