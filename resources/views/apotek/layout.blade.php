@@ -971,7 +971,12 @@
             }
 
             .branch-image {
-                aspect-ratio: 16 / 9;
+                aspect-ratio: 1 / 1;
+                padding: 10px;
+            }
+
+            .branch-image img {
+                object-fit: contain;
             }
 
             .branch-info {
