@@ -49,23 +49,23 @@ Route::get('/cabang/{branch}', function (string $branch) {
         'mempawah' => ['name' => 'Alfa Mempawah', 'logo' => 'Logo mempawah.jpg', 'phone' => '0858-2071-2029', 'instagram' => 'https://www.instagram.com/apotek_alfamempawah/', 'tiktok' => 'https://www.tiktok.com/@apotek_alfamempawah', 'address' => 'Jl. Sujarwo, Terusan, Kec. Mempawah Hilir, Kab. Mempawah, Kalimantan Barat 78912'],
     ];
 
-    $mapQueries = [
-        'sintang' => 'Jl. MT. Haryono, Kapuas Kanan Hulu, Kec. Sintang, Kab. Sintang, Kalimantan Barat 78613',
-        'air-upas' => 'MRMF+FM9, Air Upas, Kec. Air Upas, Kab. Ketapang, Kalimantan Barat 78863',
-        'kendawangan' => 'F6F8+44V, Jl. Pangeran Adi, Kendawangan Kiri, Kab. Ketapang, Kalimantan Barat 78862',
-        'balai-berkuak' => 'Jl. Istana Jaya, Kel. Balai Pinang, Kec. Simpang Hulu, Kab. Ketapang, Kalimantan Barat',
-        'nanga-tayap' => 'FHG8+859, Nanga Tayap, Kec. Nanga Tayap, Kab. Ketapang, Kalimantan Barat 78873',
-        'tumbang-titi' => '5JC6+QV7, Tumbang Titi, Kec. Tumbang Titi, Kab. Ketapang, Kalimantan Barat 78874',
-        'sosok' => 'Sosok, Kec. Tayan Hulu, Kab. Sanggau, Kalimantan Barat 78562',
-        'bodok' => '6C5M+89Q, Palem Jaya, Kec. Parindu, Kab. Sanggau, Kalimantan Barat 78561',
-        'kembayan' => 'Apotek Alfa, Tanjung Merpati, Kec. Kembayan, Kab. Sanggau, Kalimantan Barat 78516',
-        'ambawang' => 'Jl. Trans Kalimantan, Desa Jawa Tengah, Kec. Sungai Ambawang, Kab. Kubu Raya, Kalimantan Barat 78319',
-        'jungkat' => 'Jl. Raya Jungkat, Sei Nipah, Kab. Mempawah, Kalimantan Barat 78351',
-        'mempawah' => 'Jl. Sujarwo, Terusan, Kec. Mempawah Hilir, Kab. Mempawah, Kalimantan Barat 78912',
+    $mapUrls = [
+        'sintang' => 'https://www.google.com/maps/search/?api=1&query=Apotek+Alfa%2C+Kapuas+Kanan+Hulu%2C+Sintang%2C+Kalimantan+Barat',
+        'air-upas' => 'https://www.google.com/maps/search/?api=1&query=MRMF%2BFM9%2C+Air+Upas%2C+Ketapang%2C+Kalimantan+Barat',
+        'kendawangan' => 'https://www.google.com/maps/search/?api=1&query=F6F8%2B44V%2C+Kendawangan%2C+Ketapang%2C+Kalimantan+Barat',
+        'balai-berkuak' => 'https://www.google.com/maps/search/?api=1&query=Apotek+Alfa+Balai+Berkuak%2C+Simpang+Hulu%2C+Ketapang%2C+Kalimantan+Barat',
+        'nanga-tayap' => 'https://www.google.com/maps/search/?api=1&query=FHG8%2B859%2C+Nanga+Tayap%2C+Ketapang%2C+Kalimantan+Barat',
+        'tumbang-titi' => 'https://www.google.com/maps/search/?api=1&query=5JC6%2BQV7%2C+Tumbang+Titi%2C+Ketapang%2C+Kalimantan+Barat',
+        'sosok' => 'https://www.google.com/maps/search/?api=1&query=Apotek+Alfa+Sosok%2C+Tayan+Hulu%2C+Sanggau%2C+Kalimantan+Barat',
+        'bodok' => 'https://www.google.com/maps/search/?api=1&query=6C5M%2B89Q%2C+Palem+Jaya%2C+Parindu%2C+Sanggau%2C+Kalimantan+Barat',
+        'kembayan' => 'https://www.google.com/maps/search/?api=1&query=Apotek+Alfa%2C+Tanjung+Merpati%2C+Kembayan%2C+Sanggau%2C+Kalimantan+Barat',
+        'ambawang' => 'https://www.google.com/maps/search/?api=1&query=Apotek+Alfa%2C+Sungai+Ambawang%2C+Kubu+Raya%2C+Kalimantan+Barat',
+        'jungkat' => 'https://www.google.com/maps/search/?api=1&query=Apotek+Alfa%2C+Jungkat%2C+Mempawah%2C+Kalimantan+Barat',
+        'mempawah' => 'https://www.google.com/maps/search/?api=1&query=Apotek+Alfa%2C+Jl.+Sujarwo%2C+Mempawah%2C+Kalimantan+Barat',
     ];
 
     foreach ($branches as $slug => $branchData) {
-        $branches[$slug]['maps'] = 'https://www.google.com/maps/search/?api=1&query='.urlencode($mapQueries[$slug]);
+        $branches[$slug]['maps'] = $mapUrls[$slug];
     }
 
     abort_unless(isset($branches[$branch]), 404);

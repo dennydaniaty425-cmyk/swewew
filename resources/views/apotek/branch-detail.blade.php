@@ -84,6 +84,18 @@
                                 @foreach(range(1, 2) as $photoNumber)
                                     <img src="{{ asset('sosok ('.$photoNumber.').jpeg') }}" alt="Foto Apotek Alfa Sosok {{ $photoNumber }}" class="branch-photo">
                                 @endforeach
+                            @elseif($branch['name'] === 'Alfa Air Upas')
+                                @foreach(range(1, 2) as $photoNumber)
+                                    <img src="{{ asset('air upas ('.$photoNumber.').jpeg') }}" alt="Foto Apotek Alfa Air Upas {{ $photoNumber }}" class="branch-photo">
+                                @endforeach
+                            @elseif($branch['name'] === 'Alfa Jungkat')
+                                @foreach(range(1, 3) as $photoNumber)
+                                    <img src="{{ asset('jungkat ('.$photoNumber.').jpeg') }}" alt="Foto Apotek Alfa Jungkat {{ $photoNumber }}" class="branch-photo">
+                                @endforeach
+                            @elseif($branch['name'] === 'Alfa Nanga Tayap')
+                                @foreach(range(1, 2) as $photoNumber)
+                                    <img src="{{ asset('nangatayap ('.$photoNumber.').jpeg') }}" alt="Foto Apotek Alfa Nanga Tayap {{ $photoNumber }}" class="branch-photo">
+                                @endforeach
                             @else
                                 <div class="branch-photo-slot">Foto cabang segera hadir</div>
                                 <div class="branch-photo-slot">Foto cabang segera hadir</div>
