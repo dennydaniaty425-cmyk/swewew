@@ -909,6 +909,24 @@
                 gap: 20px;
             }
 
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .service-card {
+                padding: 22px 20px;
+            }
+
+            .service-card h3 {
+                font-size: 1.15rem;
+            }
+
+            .service-card p {
+                font-size: 0.94rem;
+                line-height: 1.55;
+            }
+
             .page-about .about-grid {
                 grid-template-columns: 1fr;
             }
