@@ -124,10 +124,10 @@ class NewsController extends Controller
             File::makeDirectory($directory, 0755, true, true);
         }
 
-        $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+        $filename = time().'_'.uniqid().'.'.$file->getClientOriginalExtension();
         $file->move($directory, $filename);
 
-        return 'news/' . $filename;
+        return 'news/'.$filename;
     }
 
     protected function storeGalleryFiles(Request $request): array
@@ -137,7 +137,7 @@ class NewsController extends Controller
         }
 
         $stored = [];
-        $directory = storage_path('news/gallery');
+        $directory = storage_path('news');
 
         if (! File::exists($directory)) {
             File::makeDirectory($directory, 0755, true, true);
@@ -148,9 +148,9 @@ class NewsController extends Controller
                 continue;
             }
 
-            $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+            $filename = time().'_'.uniqid().'.'.$file->getClientOriginalExtension();
             $file->move($directory, $filename);
-            $stored[] = 'news/gallery/' . $filename;
+            $stored[] = 'news/'.$filename;
         }
 
         return $stored;

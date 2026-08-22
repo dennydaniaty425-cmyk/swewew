@@ -108,7 +108,7 @@
                                 <article class="news-card">
                                     <div class="news-image-frame">
                                         @if(($newsItem->media_type ?? 'image') === 'video' && ! empty($newsItem->media_url))
-                                            <video class="news-media" muted playsinline autoplay loop>
+                                            <video class="news-media" preload="metadata" playsinline tabindex="-1" aria-hidden="true">
                                                 <source src="{{ route('media.show', ['path' => str_replace('news/', '', $newsItem->media_url)]) }}" type="video/mp4">
                                             </video>
                                         @else

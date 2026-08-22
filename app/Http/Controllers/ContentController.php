@@ -38,7 +38,7 @@ class ContentController extends Controller
         $gallery = [];
 
         if ($mediaType === 'video' && $request->hasFile('video')) {
-            $mediaUrl = $this->storeMedia($request->file('video'), 'content-video');
+            $mediaUrl = $this->storeMedia($request->file('video'));
         }
 
         if ($mediaType === 'carousel' && $request->hasFile('images')) {
@@ -90,7 +90,7 @@ class ContentController extends Controller
             if ($content->media_url && File::exists(storage_path($content->media_url))) {
                 File::delete(storage_path($content->media_url));
             }
-            $mediaUrl = $this->storeMedia($request->file('video'), 'news');
+            $mediaUrl = $this->storeMedia($request->file('video'));
             $gallery = [];
         }
 
@@ -129,24 +129,24 @@ class ContentController extends Controller
         return redirect()->route('admin.content.index')->with('success', 'Konten berhasil dihapus');
     }
 
-    protected function storeMedia($file, string $folder): string
+    protected function storeMedia($file): string
     {
-        $directory = storage_path($folder);
+        $directory = storage_path('news');
 
         if (! File::exists($directory)) {
             File::makeDirectory($directory, 0755, true, true);
         }
 
-        $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+        $filename = time().'_'.uniqid().'.'.$file->getClientOriginalExtension();
         $file->move($directory, $filename);
 
-        return $folder . '/' . $filename;
+        return 'news/'.$filename;
     }
 
     protected function storeGallery(array $files): array
     {
         $stored = [];
-        $directory = storage_path('news/gallery');
+        $directory = storage_path('news');
 
         if (! File::exists($directory)) {
             File::makeDirectory($directory, 0755, true, true);
@@ -157,9 +157,9 @@ class ContentController extends Controller
                 continue;
             }
 
-            $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+            $filename = time().'_'.uniqid().'.'.$file->getClientOriginalExtension();
             $file->move($directory, $filename);
-            $stored[] = 'news/gallery/' . $filename;
+            $stored[] = 'news/'.$filename;
         }
 
         return $stored;

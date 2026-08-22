@@ -85,8 +85,9 @@
 
         .news-detail-media video {
             width: 100%;
-            height: 460px;
-            object-fit: cover;
+            height: auto;
+            max-height: 62vh;
+            object-fit: contain;
             display: block;
         }
 
@@ -184,9 +185,12 @@
         }
 
         @media (max-width: 768px) {
-            .news-detail-media video,
             .gallery-slider {
                 height: 300px;
+            }
+
+            .news-detail-media video {
+                max-height: 420px;
             }
 
             .news-detail-media img {
